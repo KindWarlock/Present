@@ -1,21 +1,15 @@
-package ru.myitschool.lab23;
+package ru.myitschool.lab23
 
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import ru.myitschool.lab23.databinding.ActivityMainBinding
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
-import ru.myitschool.lab23.databinding.ActivityMainBinding;
-
-public class MainActivity extends AppCompatActivity {
-
-    private ActivityMainBinding binding;
-
-    @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
+class MainActivity : AppCompatActivity() {
+    //private var binding: ActivityMainBinding? = null
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //binding = ActivityMainBinding.inflate(layoutInflater)
+        //setContentView(binding!!.root)
+        setContentView(R.layout.activity_main)
     }
 }
